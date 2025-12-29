@@ -628,16 +628,35 @@ ul{
 <script>
 /* CONTADOR */
 const countdown = document.getElementById('countdown');
-let endTime = localStorage.getItem('endTime') || Date.now() + 6 * 60 * 60 * 1000;
-localStorage.setItem('endTime', endTime);
 
-setInterval(() => {
+const DURATION = 5 * 60 * 60 * 1000; // 5 horas
+let endTime = Number(localStorage.getItem('endTime'));
+
+if (!endTime || isNaN(endTime) || endTime <= Date.now()) {
+  endTime = Date.now() + DURATION;
+  localStorage.setItem('endTime', String(endTime));
+}
+
+function renderCountdown() {
   const diff = endTime - Date.now();
+
+  if (diff <= 0) {
+    countdown.textContent = ' 0h 0m 0s';
+    // Reinicia automáticamente otras 5 horas cuando llegue a cero:
+    endTime = Date.now() + DURATION;
+    localStorage.setItem('endTime', String(endTime));
+    return;
+  }
+
   const h = Math.floor(diff / 3600000);
   const m = Math.floor((diff % 3600000) / 60000);
   const s = Math.floor((diff % 60000) / 1000);
+
   countdown.textContent = ` ${h}h ${m}m ${s}s`;
-}, 1000);
+}
+
+renderCountdown();
+setInterval(renderCountdown, 1000);
 
 /* CARRUSEL */
 const thumbs = document.getElementById('thumbs');
@@ -728,6 +747,7 @@ document.querySelectorAll('.faq-item strong').forEach(item => {
   });
 });
 </script>
+
 
 </body>
 </html>
