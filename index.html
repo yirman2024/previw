@@ -1,443 +1,480 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Define el tipo de documento como HTML5 -->
+<html lang="es"> <!-- Indica que el idioma principal del sitio es español -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" /> <!-- Permite usar caracteres especiales como tildes y ñ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Hace el sitio responsive en móviles -->
 
-  <title>Bolso Bandolera para Dama | Envío Gratis y Pago en Casa</title>
+  <title>Bolso Bandolera para Dama | Envío Gratis y Pago en Casa</title> <!-- Título que aparece en la pestaña del navegador -->
 
   <!-- SEO -->
-  <meta name="description" content="Bolso bandolera para dama elegante y moderno. Envío gratis a toda Colombia, pago contraentrega y garantía de 30 días." />
-  <meta name="keywords" content="bolso bandolera dama, bolso mujer Colombia, bolso contraentrega, bolso elegante mujer" />
-  <meta name="author" content="Estilo Para Ti" />
-  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Bolso bandolera para dama elegante y moderno. Envío gratis a toda Colombia, pago contraentrega y garantía de 30 días." /> <!-- Descripción para buscadores -->
+  <meta name="keywords" content="bolso bandolera dama, bolso mujer Colombia, bolso contraentrega, bolso elegante mujer" /> <!-- Palabras clave SEO -->
+  <meta name="author" content="Estilo Para Ti" /> <!-- Autor del sitio -->
+  <meta name="robots" content="index, follow" /> <!-- Permite que Google indexe la página -->
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Bolso Bandolera para Dama | Envío Gratis y Pago en Casa" />
-  <meta property="og:description" content="Diseño elegante, pago contraentrega y envío gratis a toda Colombia." />
-  <meta property="og:image" content="https://tudominio.com/img/producto1.jpeg" />
-  <meta property="og:url" content="https://tudominio.com/" />
-  <meta property="og:site_name" content="Estilo Para Ti" />
+  <!-- Open Graph (para redes sociales) -->
+  <meta property="og:type" content="website" /> <!-- Define el tipo de contenido -->
+  <meta property="og:title" content="Bolso Bandolera para Dama | Envío Gratis y Pago en Casa" /> <!-- Título al compartir -->
+  <meta property="og:description" content="Diseño elegante, pago contraentrega y envío gratis a toda Colombia." /> <!-- Descripción al compartir -->
+  <meta property="og:image" content="https://tudominio.com/img/producto1.jpeg" /> <!-- Imagen al compartir -->
+  <meta property="og:url" content="https://tudominio.com/" /> <!-- URL principal -->
+  <meta property="og:site_name" content="Estilo Para Ti" /> <!-- Nombre del sitio -->
 
-  <meta name="theme-color" content="#000000" />
-
+  <meta name="theme-color" content="#000000" /> <!-- Color de la barra del navegador en móviles -->
 
   <style>
+    /* =========================
+       VARIABLES GLOBALES
+       ========================= */
+
+    :root{
+      --primary:#22c55e; /* Color principal del sitio */
+      --dark:#111827;    /* Color oscuro para textos */
+      --gray:#6b7280;    /* Color gris para textos secundarios */
+      --bg:#f9fafb;      /* Color de fondo general */
+    }
 
     /* =========================
-   VARIABLES GLOBALES
-   ========================= */
-:root{
-  --primary:#22c55e;
-  --dark:#111827;
-  --gray:#6b7280;
-  --bg:#f9fafb;
-}
+       RESET GENERAL
+       ========================= */
 
-/* =========================
-   RESET GENERAL
-   ========================= */
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-  font-family:Arial,Helvetica,sans-serif;
-}
+    *{
+      box-sizing:border-box; /* Incluye padding y borde dentro del tamaño total */
+      margin:0;              /* Elimina márgenes por defecto */
+      padding:0;             /* Elimina rellenos por defecto */
+      font-family:Arial,Helvetica,sans-serif; /* Fuente general del sitio */
+    }
 
-/* =========================
-   BODY
-   ========================= */
-body{
-  background:var(--bg);
-  color:var(--dark);
-}
+    /* =========================
+       BODY
+       ========================= */
 
-/* =========================
-   TOPBAR
-   ========================= */
-.topbar{
-  background:linear-gradient(90deg,#6b21a8,#a855f7);
-  color:#fff;
-  padding:8px 12px;
-}
+    body{
+      background:var(--bg); /* Aplica el color de fondo */
+      color:var(--dark);    /* Color principal del texto */
+    }
 
-.topbar-inner{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  max-width:1100px;
-  margin:auto;
-}
+    /* =========================
+       TOPBAR
+       ========================= */
 
-.logo img{
-  height:36px;
-  border-radius:50%;
-  background:#000;
-  box-shadow:0 0 8px rgba(255,215,0,.45);
-}
+    .topbar{
+      background:linear-gradient(90deg,#6b21a8,#a855f7); /* Fondo degradado */
+      color:#fff; /* Texto en color blanco */
+      padding:8px 12px; /* Espaciado interno */
+    }
 
-.topbar-text{
-  flex:1;
-  text-align:center;
-  font-size:18px;
-}
+    .topbar-inner{
+      display:flex; /* Activa flexbox */
+      align-items:center; /* Centra verticalmente los elementos */
+      gap:12px; /* Espacio entre elementos */
+      max-width:1100px; /* Ancho máximo */
+      margin:auto; /* Centra horizontalmente */
+    }
 
-/* =========================
-   CONTENEDOR
-   ========================= */
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:16px;
-}
+    .logo img{
+      height:36px; /* Altura del logo */
+      border-radius:50%; /* Hace la imagen circular */
+      background:#000; /* Fondo negro */
+      box-shadow:0 0 8px rgba(255,215,0,.45); /* Sombra dorada */
+    }
+
+    .topbar-text{
+      flex:1; /* Ocupa el espacio disponible */
+      text-align:center; /* Centra el texto */
+      font-size:18px; /* Tamaño del texto */
+    }
+
+    /* =========================
+       CONTENEDOR
+       ========================= */
+
+    .container{
+      max-width:1100px; /* Ancho máximo del contenido */
+      margin:auto; /* Centrado horizontal */
+      padding:16px; /* Espaciado interno */
+    }
+
 
 /* =========================
    GRID PRINCIPAL
    ========================= */
+
 .grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:32px;
+  display:grid; /* Activa el sistema de cuadrícula (CSS Grid) */
+  grid-template-columns:1fr 1fr; /* Crea dos columnas del mismo tamaño */
+  gap:32px; /* Espacio entre columnas y filas */
 }
 
+/* Media query para pantallas pequeñas */
 @media(max-width:768px){
   .grid{
-    grid-template-columns:1fr;
+    grid-template-columns:1fr; /* Cambia a una sola columna en móviles */
   }
 }
 
 /* =========================
    CARRUSEL ALINEADO (FIX)
    ========================= */
+
 .carousel-wrapper{
-  display:grid;
-  grid-template-columns:80px 1fr;
-  gap:14px;
-  align-items:start;
+  display:grid; /* Usa grid para alinear miniaturas e imagen principal */
+  grid-template-columns:80px 1fr; /* Columna fija para miniaturas y otra flexible */
+  gap:14px; /* Espacio entre miniaturas y la imagen principal */
+  align-items:start; /* Alinea el contenido arriba */
 }
 
-/* MINIATURAS */
+/* =========================
+   MINIATURAS
+   ========================= */
+
 .thumbs{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  max-height:420px;
-  overflow-y:auto;
+  display:flex; /* Usa flexbox */
+  flex-direction:column; /* Ordena las miniaturas en columna */
+  gap:10px; /* Espacio entre miniaturas */
+  max-height:420px; /* Altura máxima del contenedor */
+  overflow-y:auto; /* Activa scroll vertical si hay muchas imágenes */
 }
 
 .thumbs img{
-  width:70px;
-  height:70px;
-  object-fit:cover;
-  border-radius:8px;
-  border:2px solid #e5e7eb;
-  cursor:pointer;
+  width:70px; /* Ancho de cada miniatura */
+  height:70px; /* Alto de cada miniatura */
+  object-fit:cover; /* Recorta la imagen sin deformarla */
+  border-radius:8px; /* Bordes redondeados */
+  border:2px solid #e5e7eb; /* Borde gris claro */
+  cursor:pointer; /* Cambia el cursor al pasar el mouse */
 }
 
 .thumbs img.active{
-  border-color:var(--primary);
+  border-color:var(--primary); /* Resalta la miniatura activa */
 }
 
-/* IMAGEN PRINCIPAL */
+/* =========================
+   IMAGEN PRINCIPAL
+   ========================= */
+
 .main-img{
-  position:relative;
-  height:420px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#fff;
-  border-radius:14px;
+  position:relative; /* Permite posicionar flechas dentro */
+  height:420px; /* Altura fija del contenedor */
+  display:flex; /* Usa flexbox */
+  align-items:center; /* Centra verticalmente la imagen */
+  justify-content:center; /* Centra horizontalmente la imagen */
+  background:#fff; /* Fondo blanco */
+  border-radius:14px; /* Bordes redondeados */
 }
 
 .main-img img{
-  max-width:100%;
-  max-height:100%;
-  object-fit:contain;
-  border-radius:12px;
+  max-width:100%; /* Evita que la imagen se salga del contenedor */
+  max-height:100%; /* Limita la altura máxima */
+  object-fit:contain; /* Muestra la imagen completa sin recorte */
+  border-radius:12px; /* Bordes redondeados */
 }
 
-/* FLECHAS */
+/* =========================
+   FLECHAS DEL CARRUSEL
+   ========================= */
+
 .arrow{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,.55);
-  color:#fff;
-  border:none;
-  width:42px;
-  height:42px;
-  border-radius:50%;
-  font-size:26px;
-  cursor:pointer;
-  z-index:10;
+  position:absolute; /* Se posiciona sobre la imagen */
+  top:50%; /* Se ubica verticalmente al centro */
+  transform:translateY(-50%); /* Ajuste fino para centrar */
+  background:rgba(0,0,0,.55); /* Fondo negro semitransparente */
+  color:#fff; /* Color del icono */
+  border:none; /* Sin borde */
+  width:42px; /* Ancho del botón */
+  height:42px; /* Alto del botón */
+  border-radius:50%; /* Forma circular */
+  font-size:26px; /* Tamaño del icono */
+  cursor:pointer; /* Cursor tipo botón */
+  z-index:10; /* Se mantiene encima de la imagen */
 }
 
-.arrow.left{ left:12px; }
-.arrow.right{ right:12px; }
+.arrow.left{ 
+  left:12px; /* Posición desde la izquierda */
+}
+
+.arrow.right{ 
+  right:12px; /* Posición desde la derecha */
+}
 
 .arrow:hover{
-  background:rgba(0,0,0,.75);
+  background:rgba(0,0,0,.75); /* Oscurece el fondo al pasar el mouse */
 }
 
 /* =========================
    TEXTOS Y PRECIOS
    ========================= */
+
 h1{
-  font-size:28px;
-  margin-bottom:8px;
+  font-size:28px; /* Tamaño del título principal */
+  margin-bottom:8px; /* Espacio inferior */
 }
 
 .price{
-  margin:12px 0;
+  margin:12px 0; /* Espaciado arriba y abajo del precio */
 }
 
 .old{
-  color:#9ca3af;
-  text-decoration:line-through;
-  margin-right:8px;
+  color:#9ca3af; /* Color gris */
+  text-decoration:line-through; /* Precio tachado */
+  margin-right:8px; /* Espacio a la derecha */
 }
 
 .new{
-  color:#16a34a;
-  font-size:30px;
-  font-weight:bold;
+  color:#16a34a; /* Color verde (precio actual) */
+  font-size:30px; /* Tamaño grande */
+  font-weight:bold; /* Texto en negrita */
 }
 
 .badge{
-  background:#dcfce7;
-  color:#166534;
-  padding:4px 8px;
-  border-radius:6px;
-  font-size:14px;
+  background:#dcfce7; /* Fondo verde claro */
+  color:#166534; /* Texto verde oscuro */
+  padding:4px 8px; /* Espaciado interno */
+  border-radius:6px; /* Bordes redondeados */
+  font-size:14px; /* Tamaño del texto */
 }
 
 /* =========================
    LISTAS
    ========================= */
+
 ul{
-  margin:12px 0 20px 20px;
-  color:var(--gray);
+  margin:12px 0 20px 20px; /* Márgenes: arriba, derecha, abajo, izquierda */
+  color:var(--gray); /* Color gris definido en variables */
 }
 
 /* =========================
    CTA PRINCIPAL
    ========================= */
+
 .cta{
-  background:var(--primary);
-  color:#fff;
-  border:none;
-  width:80%;
-  max-width:320px;
-  padding:14px;
-  font-size:17px;
-  border-radius:999px;
-  cursor:pointer;
-  margin:20px auto;
-  display:block;
-  text-align:center;
+  background:var(--primary); /* Color principal del botón */
+  color:#fff; /* Texto blanco */
+  border:none; /* Sin borde */
+  width:80%; /* Ancho relativo */
+  max-width:320px; /* Ancho máximo */
+  padding:14px; /* Espaciado interno */
+  font-size:17px; /* Tamaño del texto */
+  border-radius:999px; /* Botón totalmente redondeado */
+  cursor:pointer; /* Cursor tipo botón */
+  margin:20px auto; /* Centrado horizontal con margen */
+  display:block; /* Se comporta como bloque */
+  text-align:center; /* Texto centrado */
 }
 
 .cta:hover{
-  opacity:.9;
+  opacity:.9; /* Reduce ligeramente la opacidad al pasar el mouse */
 }
 
 /* =========================
    PRUEBA SOCIAL
    ========================= */
+
 .social-proof{
-  background:#ecfeff;
-  border:1px solid #67e8f9;
-  color:#0f766e;
-  padding:10px 14px;
-  border-radius:8px;
-  font-size:15px;
-  margin:16px 0;
-  text-align:center;
+  background:#ecfeff; /* Fondo azul claro */
+  border:1px solid #67e8f9; /* Borde azul */
+  color:#0f766e; /* Texto verde azulado */
+  padding:10px 14px; /* Espaciado interno */
+  border-radius:8px; /* Bordes redondeados */
+  font-size:15px; /* Tamaño del texto */
+  margin:16px 0; /* Espaciado vertical */
+  text-align:center; /* Texto centrado */
 }
+
 
 /* =========================
    URGENCIA
    ========================= */
+
 .urgency-box{
-  background:#fef3c7;
-  border:1px solid #fde68a;
-  color:#92400e;
-  padding:12px;
-  border-radius:8px;
-  font-size:15px;
-  text-align:center;
+  background:#fef3c7; /* Fondo amarillo claro (sensación de urgencia) */
+  border:1px solid #fde68a; /* Borde amarillo */
+  color:#92400e; /* Color del texto (marrón) */
+  padding:12px; /* Espaciado interno */
+  border-radius:8px; /* Bordes redondeados */
+  font-size:15px; /* Tamaño del texto */
+  text-align:center; /* Texto centrado */
 }
 
 /* =========================
    DETALLES
    ========================= */
+
 .details-list{
-  list-style:none;
-  padding:0;
-  color:var(--gray);
+  list-style:none; /* Quita los puntos de la lista */
+  padding:0; /* Elimina padding por defecto */
+  color:var(--gray); /* Color gris definido en variables */
 }
 
 .details-list li{
-  margin-bottom:6px;
-  font-size:15px;
+  margin-bottom:6px; /* Espacio entre elementos de la lista */
+  font-size:15px; /* Tamaño del texto */
 }
 
 /* =========================
    SECCIONES
    ========================= */
+
 .section{
-  margin:48px 0;
+  margin:48px 0; /* Espacio vertical entre secciones */
 }
 
 .section h2{
-  margin-bottom:16px;
+  margin-bottom:16px; /* Separación del título respecto al contenido */
 }
 
 /* =========================
    FAQ
    ========================= */
+
 .faq-item{
-  border-bottom:1px solid #e5e7eb;
-  padding:12px 0;
-  cursor:pointer;
+  border-bottom:1px solid #e5e7eb; /* Línea separadora inferior */
+  padding:12px 0; /* Espaciado vertical */
+  cursor:pointer; /* Indica que es interactivo */
 }
 
 .faq-item p{
-  display:none;
-  color:var(--gray);
-  margin-top:8px;
+  display:none; /* Oculta la respuesta por defecto */
+  color:var(--gray); /* Color gris del texto */
+  margin-top:8px; /* Separación del título */
 }
 
 .faq-item.active p{
-  display:block;
+  display:block; /* Muestra la respuesta cuando está activo */
 }
 
 /* =========================
    VIDEO
    ========================= */
+
 .video{
-  margin:32px 0;
+  margin:32px 0; /* Espaciado vertical del contenedor de video */
 }
 
 .video video{
-  width:85%;
-  max-width:420px;
-  height:260px;
-  object-fit:cover;
-  border-radius:16px;
-  margin:auto;
-  display:block;
+  width:85%; /* Ancho relativo del video */
+  max-width:420px; /* Ancho máximo */
+  height:260px; /* Altura fija */
+  object-fit:cover; /* Ajusta el video sin deformar */
+  border-radius:16px; /* Bordes redondeados */
+  margin:auto; /* Centra horizontalmente */
+  display:block; /* Se comporta como bloque */
 }
 
 /* =========================
    MODAL
    ========================= */
+
 .modal{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.6);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  z-index:50;
+  position:fixed; /* Se fija sobre toda la pantalla */
+  inset:0; /* Ocupa todo el viewport */
+  background:rgba(0,0,0,.6); /* Fondo oscuro semitransparente */
+  display:none; /* Oculto por defecto */
+  align-items:center; /* Centra verticalmente el contenido */
+  justify-content:center; /* Centra horizontalmente el contenido */
+  z-index:50; /* Se superpone sobre otros elementos */
 }
 
 .modal-content{
-  background:#fff;
-  padding:24px;
-  border-radius:12px;
-  width:90%;
-  max-width:400px;
+  background:#fff; /* Fondo blanco */
+  padding:24px; /* Espaciado interno */
+  border-radius:12px; /* Bordes redondeados */
+  width:90%; /* Ancho relativo */
+  max-width:400px; /* Ancho máximo */
 }
 
+/* Campos del formulario dentro del modal */
 .modal-content input,
 .modal-content select{
-  width:100%;
-  padding:10px;
-  margin-bottom:10px;
-  border:1px solid #d1d5db;
-  border-radius:6px;
+  width:100%; /* Ocupan todo el ancho */
+  padding:10px; /* Espaciado interno */
+  margin-bottom:10px; /* Separación entre campos */
+  border:1px solid #d1d5db; /* Borde gris */
+  border-radius:6px; /* Bordes redondeados */
 }
 
 /* =========================
    CTA STICKY
    ========================= */
+
 .sticky-cta{
-  position:fixed;
-  bottom:0;
-  left:0;
-  width:100%;
-  background:var(--primary);
-  color:#fff;
-  padding:14px;
-  text-align:center;
-  font-size:18px;
-  z-index:40;
+  position:fixed; /* Fijo en pantalla */
+  bottom:0; /* Pegado abajo */
+  left:0; /* Pegado a la izquierda */
+  width:100%; /* Ocupa todo el ancho */
+  background:var(--primary); /* Color principal */
+  color:#fff; /* Texto blanco */
+  padding:14px; /* Espaciado interno */
+  text-align:center; /* Texto centrado */
+  font-size:18px; /* Tamaño del texto */
+  z-index:40; /* Capa alta pero debajo del modal */
 }
 
 .sticky-cta button{
-  background:none;
-  border:none;
-  color:#fff;
-  font-size:18px;
-  font-weight:bold;
-  cursor:pointer;
+  background:none; /* Sin fondo */
+  border:none; /* Sin borde */
+  color:#fff; /* Texto blanco */
+  font-size:18px; /* Tamaño del texto */
+  font-weight:bold; /* Texto en negrita */
+  cursor:pointer; /* Cursor tipo botón */
 }
 
 /* =========================
    CONTADOR
    ========================= */
+
 #countdown{
-  font-weight:bold;
-  color:#fffb00;
-  background:#000;
-  padding:2px 6px;
-  border-radius:4px;
-  margin-left:6px;
+  font-weight:bold; /* Texto en negrita */
+  color:#fffb00; /* Texto amarillo */
+  background:#000; /* Fondo negro */
+  padding:2px 6px; /* Espaciado interno */
+  border-radius:4px; /* Bordes redondeados */
+  margin-left:6px; /* Separación a la izquierda */
 }
 
 /* =========================
    FOOTER
    ========================= */
+
 .footer{
-  text-align:center;
-  color:var(--gray);
-  font-size:14px;
-  margin:40px 0;
+  text-align:center; /* Texto centrado */
+  color:var(--gray); /* Color gris */
+  font-size:14px; /* Tamaño del texto */
+  margin:40px 0; /* Espaciado vertical */
 }
 
 /* =========================
    MOBILE
    ========================= */
+
 @media(max-width:768px){
 
   .logo img{
-    height:30px;
+    height:30px; /* Reduce el tamaño del logo en móviles */
   }
 
   .topbar-text{
-    font-size:14px;
+    font-size:14px; /* Texto más pequeño en móviles */
   }
 
   .carousel-wrapper{
-    grid-template-columns:1fr;
+    grid-template-columns:1fr; /* Carrusel en una sola columna */
   }
 
   .thumbs{
-    flex-direction:row;
-    max-height:none;
-    overflow-x:auto;
-    margin-top:12px;
+    flex-direction:row; /* Miniaturas en fila horizontal */
+    max-height:none; /* Sin límite de altura */
+    overflow-x:auto; /* Scroll horizontal */
+    margin-top:12px; /* Separación superior */
   }
 
   .thumbs img{
-    width:60px;
-    height:60px;
+    width:60px; /* Miniaturas más pequeñas */
+    height:60px; /* Miniaturas más pequeñas */
   }
 
   .main-img{
-    height:280px;
+    height:280px; /* Reduce altura de la imagen principal */
   }
 }
 
@@ -447,71 +484,94 @@ ul{
 
 <body>
 
-<!-- TOPBAR -->
-<header class="topbar">
-  <div class="topbar-inner">
-    <div class="logo">
-      <img src="img/logo.png" alt="Estilo Para Ti">
+<!-- =========================
+     TOPBAR (BARRA SUPERIOR)
+     ========================= -->
+<header class="topbar"> <!-- Contenedor principal de la barra superior -->
+  <div class="topbar-inner"> <!-- Contenedor interno centrado -->
+
+    <!-- LOGO -->
+    <div class="logo"> <!-- Contenedor del logo -->
+      <img src="img/logo.png" alt="Estilo Para Ti"> <!-- Imagen del logo con texto alternativo -->
     </div>
 
-    <div class="topbar-text">
+    <!-- TEXTO PROMOCIONAL -->
+    <div class="topbar-text"> <!-- Texto informativo y de venta -->
       🚚 Envíos gratis a toda Colombia · 💵 <strong>Paga al recibir</strong> · ⏰ Oferta termina en
-      <span id="countdown"></span>
+      <span id="countdown"></span> <!-- Contador dinámico manejado por JavaScript -->
     </div>
+
   </div>
 </header>
 
-<main class="container">
+<!-- =========================
+     CONTENIDO PRINCIPAL
+     ========================= -->
+<main class="container"> <!-- Contenedor general del contenido -->
 
-  <div class="grid">
+  <div class="grid"> <!-- Grid principal con dos columnas -->
 
-    <!-- CARRUSEL CORREGIDO -->
-    <div class="carousel-wrapper">
+    <!-- =========================
+         CARRUSEL DE IMÁGENES
+         ========================= -->
+    <div class="carousel-wrapper"> <!-- Contenedor del carrusel -->
 
       <!-- MINIATURAS -->
-      <div class="thumbs" id="thumbs"></div>
+      <div class="thumbs" id="thumbs"></div> <!-- Miniaturas generadas por JavaScript -->
 
       <!-- IMAGEN PRINCIPAL -->
-      <div class="main-img">
-        <button class="arrow left" onclick="prevImage()">‹</button>
-        <img id="mainImg" src="img/producto10.jpeg" alt="Bolso bandolera para dama">
-        <button class="arrow right" onclick="nextImage()">›</button>
+      <div class="main-img"> <!-- Contenedor de la imagen grande -->
+        <button class="arrow left" onclick="prevImage()">‹</button> <!-- Flecha izquierda -->
+        <img id="mainImg" src="img/producto10.jpeg" alt="Bolso bandolera para dama"> <!-- Imagen principal -->
+        <button class="arrow right" onclick="nextImage()">›</button> <!-- Flecha derecha -->
       </div>
 
     </div>
 
-    <!-- INFO PRODUCTO -->
-    <section>
-      <h1>Bolso Bandolera para Dama</h1>
-      <p>Diseñado para verte bien sin cargar de más. Ideal para tu día a día.</p>
+    <!-- =========================
+         INFORMACIÓN DEL PRODUCTO
+         ========================= -->
+    <section> <!-- Sección de texto y CTA -->
 
-      <div class="price">
-        <span class="old">$119.900 COP</span>
-        <span class="new">$99.900 COP</span>
-        <span class="badge">Ahorra $20.000</span>
+      <h1>Bolso Bandolera para Dama</h1> <!-- Título principal del producto -->
+
+      <p>Diseñado para verte bien sin cargar de más. Ideal para tu día a día.</p> <!-- Descripción corta -->
+
+      <!-- PRECIOS -->
+      <div class="price"> <!-- Contenedor de precios -->
+        <span class="old">$119.900 COP</span> <!-- Precio anterior -->
+        <span class="new">$99.900 COP</span> <!-- Precio actual -->
+        <span class="badge">Ahorra $20.000</span> <!-- Etiqueta de ahorro -->
       </div>
 
-      <button class="cta" onclick="openModal()">COMPRAR AHORA</button>
+      <!-- CTA PRINCIPAL -->
+      <button class="cta" onclick="openModal()">COMPRAR AHORA</button> <!-- Botón de compra -->
 
+      <!-- MENSAJE DE CONFIANZA -->
       <p style="text-align:center;font-size:13px;color:#6b7280;margin-top:6px;">
         🔒 Pago contraentrega · 🚚 Envío gratis · 📦 Garantía 30 días
       </p>
 
-      <div class="social-proof">
+      <!-- PRUEBA SOCIAL -->
+      <div class="social-proof"> <!-- Muestra confianza social -->
         👩‍🦰 <strong><span id="buyersCount">127</span> mujeres en Colombia</strong> ya lo recibieron
       </div>
 
+      <!-- BENEFICIOS -->
       <h2>Beneficios del bolso</h2>
-      <ul>
+      <ul> <!-- Lista de beneficios -->
         <li>Diseño elegante y moderno</li>
         <li>Múltiples compartimentos internos</li>
         <li>Cuero sintético de alta calidad</li>
         <li>Pago contraentrega y envío gratis</li>
       </ul>
 
+      <!-- INFORMACIÓN EXTRA -->
       <div class="extra-info">
-        <h3>Detalles del producto</h3>
-        <ul class="details-list">
+
+        <h3>Detalles del producto</h3> <!-- Subtítulo -->
+
+        <ul class="details-list"> <!-- Lista sin viñetas -->
           <li>📏 Tamaño ideal para uso diario</li>
           <li>📱 Cabe celular grande, billetera y llaves</li>
           <li>👜 Correa ajustable y cómoda</li>
@@ -519,20 +579,26 @@ ul{
           <li>🎨 Disponible en varios colores</li>
         </ul>
 
-        <div class="urgency-box">
+        <!-- BLOQUE DE URGENCIA -->
+        <div class="urgency-box"> <!-- Caja de urgencia -->
           ⏰ <strong>Oferta por tiempo limitado</strong><br>
           📦 Últimas unidades disponibles<br>
           🔥 Precio especial solo hoy
         </div>
+
       </div>
 
+      <!-- CTA SECUNDARIO -->
       <button class="cta" onclick="openModal()">QUIERO MI BOLSO HOY</button>
+
     </section>
 
   </div>
 
-  <!-- GARANTÍA -->
-  <section class="section">
+  <!-- =========================
+       GARANTÍA
+       ========================= -->
+  <section class="section"> <!-- Sección independiente -->
     <h2>Garantía y Confianza</h2>
     <p>
       Garantía por defecto de fábrica o error de color.<br>
@@ -540,71 +606,85 @@ ul{
     </p>
   </section>
 
- 
-  <!-- FAQ -->
-<section class="section">
-  <h2>Preguntas frecuentes</h2>
+  <!-- =========================
+       FAQ (PREGUNTAS FRECUENTES)
+       ========================= -->
+  <section class="section">
+    <h2>Preguntas frecuentes</h2>
 
-  <div class="faq-item">
-    <strong>➕ ¿Cómo pago?</strong>
-    <p>Paga contraentrega al recibir el producto en tu casa.</p>
-  </div>
+    <!-- Cada faq-item se abre/cierra con JavaScript -->
+    <div class="faq-item">
+      <strong>➕ ¿Cómo pago?</strong>
+      <p>Paga contraentrega al recibir el producto en tu casa.</p>
+    </div>
 
-  <div class="faq-item">
-    <strong>➕ ¿El envío es gratis?</strong>
-    <p>Sí, el envío es totalmente gratis a toda Colombia.</p>
-  </div>
+    <div class="faq-item">
+      <strong>➕ ¿El envío es gratis?</strong>
+      <p>Sí, el envío es totalmente gratis a toda Colombia.</p>
+    </div>
 
-  <div class="faq-item">
-    <strong>➕ ¿Cuánto tarda en llegar?</strong>
-    <p>El tiempo de entrega es de 6 a 8 días hábiles según tu ciudad.</p>
-  </div>
+    <div class="faq-item">
+      <strong>➕ ¿Cuánto tarda en llegar?</strong>
+      <p>El tiempo de entrega es de 6 a 8 días hábiles según tu ciudad.</p>
+    </div>
 
-  <div class="faq-item">
-    <strong>➕ ¿Tiene garantía?</strong>
-    <p>Sí, cuenta con garantía de 30 días por defecto de fábrica o error de color.</p>
-  </div>
+    <div class="faq-item">
+      <strong>➕ ¿Tiene garantía?</strong>
+      <p>Sí, cuenta con garantía de 30 días por defecto de fábrica o error de color.</p>
+    </div>
 
-  <div class="faq-item">
-    <strong>➕ ¿Puedo revisar el producto antes de pagar?</strong>
-    <p>No, por políticas de la transportadora no está permitido abrir el paquete antes de pagar.</p>
-  </div>
+    <div class="faq-item">
+      <strong>➕ ¿Puedo revisar el producto antes de pagar?</strong>
+      <p>No, por políticas de la transportadora no está permitido abrir el paquete antes de pagar.</p>
+    </div>
 
-  <div class="faq-item">
-    <strong>➕ ¿Qué pasa si no estoy en casa al momento de la entrega?</strong>
-    <p>La transportadora se comunica contigo para reprogramar la entrega.</p>
-  </div>
+    <div class="faq-item">
+      <strong>➕ ¿Qué pasa si no estoy en casa al momento de la entrega?</strong>
+      <p>La transportadora se comunica contigo para reprogramar la entrega.</p>
+    </div>
 
-  <div class="faq-item">
-    <strong>➕ ¿Cómo me contactan después de comprar?</strong>
-    <p>Te confirmamos el pedido por WhatsApp antes de realizar el envío.</p>
-  </div>
+    <div class="faq-item">
+      <strong>➕ ¿Cómo me contactan después de comprar?</strong>
+      <p>Te confirmamos el pedido por WhatsApp antes de realizar el envío.</p>
+    </div>
 
-  <div class="faq-item">
-    <strong>➕ ¿Puedo pedir más de un bolso?</strong>
-    <p>Sí, puedes pedir varios bolsos y elegir color para cada uno.</p>
-  </div>
-</section>
+    <div class="faq-item">
+      <strong>➕ ¿Puedo pedir más de un bolso?</strong>
+      <p>Sí, puedes pedir varios bolsos y elegir color para cada uno.</p>
+    </div>
+  </section>
 
-<!-- CTA STICKY -->
-<div class="sticky-cta">
+</main>
+
+<!-- =========================
+     CTA STICKY (FIJO)
+     ========================= -->
+<div class="sticky-cta"> <!-- CTA fijo en la parte inferior -->
   <button onclick="openModal()">👜 COMPRAR AHORA $99.900 · PAGO EN CASA</button>
 </div>
 
+<!-- =========================
+     FOOTER
+     ========================= -->
 <footer class="footer">
   © Estilo Para Ti · Tienda Online · Colombia
 </footer>
 
-<!-- MODAL -->
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <h3>Completa tus datos</h3>
+<!-- =========================
+     MODAL DE COMPRA
+     ========================= -->
+<div class="modal" id="modal"> <!-- Fondo oscuro del modal -->
+  <div class="modal-content"> <!-- Contenido del formulario -->
 
+    <h3>Completa tus datos</h3> <!-- Título del modal -->
+
+    <!-- CAMPOS DEL FORMULARIO -->
     <input id="name" placeholder="Nombre completo" />
     <input id="city" placeholder="Ciudad" />
     <input id="address" placeholder="Dirección" />
     <input id="phone" placeholder="Teléfono" />
 
+    <!-- SELECT DE COLORES -->
     <select id="color">
       <option value="">Selecciona color</option>
       <option>Negro</option>
@@ -620,91 +700,141 @@ ul{
       <option>Verde</option>
     </select>
 
+    <!-- BOTÓN DE ENVÍO -->
     <button class="cta" onclick="sendWhatsApp()">ENVIAR PEDIDO</button>
+
   </div>
 </div>
 
-<!-- SCRIPTS -->
-<script>
-/* CONTADOR */
-const countdown = document.getElementById('countdown');
 
-const DURATION = 5 * 60 * 60 * 1000; // 5 horas
-let endTime = Number(localStorage.getItem('endTime'));
+<!-- SCRIPTS --> <!-- Sección donde se incluye el JavaScript de la página -->
+<script> <!-- Inicia el bloque de JavaScript -->
 
-if (!endTime || isNaN(endTime) || endTime <= Date.now()) {
-  endTime = Date.now() + DURATION;
-  localStorage.setItem('endTime', String(endTime));
+/* =========================
+   CONTADOR
+   ========================= */
+
+/* Obtiene el elemento del HTML donde se mostrará el tiempo restante */
+const countdown = document.getElementById('countdown'); // Busca el <span id="countdown">
+
+/* Define la duración del contador (en milisegundos) */
+const DURATION = 5 * 60 * 60 * 1000; // 5 horas: 5 * 60 minutos * 60 segundos * 1000 ms
+
+/* Intenta leer desde localStorage el tiempo de finalización guardado */
+let endTime = Number(localStorage.getItem('endTime')); // Convierte a número el valor guardado
+
+/* Si no existe endTime, es inválido (NaN) o ya pasó, se reinicia el contador */
+if (!endTime || isNaN(endTime) || endTime <= Date.now()) { // Valida si el tiempo guardado sirve
+  endTime = Date.now() + DURATION; // Establece fin de contador (hora actual + duración)
+  localStorage.setItem('endTime', String(endTime)); // Guarda el endTime en localStorage para persistencia
 }
 
-function renderCountdown() {
-  const diff = endTime - Date.now();
+/* Función que calcula y actualiza el texto del contador en pantalla */
+function renderCountdown() { // Define función para renderizar el contador
+  const diff = endTime - Date.now(); // Calcula la diferencia entre fin y hora actual
 
-  if (diff <= 0) {
-    countdown.textContent = ' 0h 0m 0s';
+  /* Si ya se acabó el tiempo */
+  if (diff <= 0) { // Si la diferencia es 0 o negativa
+    countdown.textContent = ' 0h 0m 0s'; // Muestra el contador en cero
+
     // Reinicia automáticamente otras 5 horas cuando llegue a cero:
-    endTime = Date.now() + DURATION;
-    localStorage.setItem('endTime', String(endTime));
-    return;
+    endTime = Date.now() + DURATION; // Vuelve a poner el final a 5 horas desde ahora
+    localStorage.setItem('endTime', String(endTime)); // Guarda el nuevo endTime
+    return; // Sale de la función para evitar cálculos adicionales
   }
 
-  const h = Math.floor(diff / 3600000);
-  const m = Math.floor((diff % 3600000) / 60000);
-  const s = Math.floor((diff % 60000) / 1000);
+  /* Convierte milisegundos a horas, minutos y segundos */
+  const h = Math.floor(diff / 3600000); // 3600000 ms = 1 hora
+  const m = Math.floor((diff % 3600000) / 60000); // Resto de horas convertido a minutos (60000 ms = 1 min)
+  const s = Math.floor((diff % 60000) / 1000); // Resto de minutos convertido a segundos (1000 ms = 1 seg)
 
-  countdown.textContent = ` ${h}h ${m}m ${s}s`;
+  /* Escribe el tiempo formateado dentro del span del contador */
+  countdown.textContent = ` ${h}h ${m}m ${s}s`; // Actualiza el texto visible del contador
 }
 
-renderCountdown();
-setInterval(renderCountdown, 1000);
+/* Renderiza el contador una vez al cargar la página */
+renderCountdown(); // Muestra el primer valor inmediatamente
 
-/* CARRUSEL */
-const thumbs = document.getElementById('thumbs');
-const mainImg = document.getElementById('mainImg');
-let currentIndex = 0;
+/* Actualiza el contador cada 1 segundo */
+setInterval(renderCountdown, 1000); // Llama a renderCountdown cada 1000 ms
+
+/* =========================
+   CARRUSEL
+   ========================= */
+
+/* Obtiene el contenedor donde se insertarán las miniaturas */
+const thumbs = document.getElementById('thumbs'); // Contenedor <div id="thumbs">
+
+/* Obtiene la imagen principal que cambia en el carrusel */
+const mainImg = document.getElementById('mainImg'); // Imagen principal <img id="mainImg">
+
+/* Guarda el índice actual de la imagen mostrada */
+let currentIndex = 0; // Inicia en 0 (primera imagen)
+
+/* Define cuántas imágenes tiene el carrusel */
 const totalImages = 16; //Cantidad de imagenes en el carrucel///
 
-for (let i = 1; i <= totalImages; i++) {
-  const img = document.createElement('img');
-  img.src = `img/producto${i}.jpeg`;
-  if (i === 1) img.classList.add('active');
-  img.onclick = () => setImage(i - 1);
-  thumbs.appendChild(img);
+/* Crea dinámicamente las miniaturas (de producto1.jpeg a producto16.jpeg) */
+for (let i = 1; i <= totalImages; i++) { // Recorre desde 1 hasta totalImages
+  const img = document.createElement('img'); // Crea un elemento <img> para miniatura
+  img.src = `img/producto${i}.jpeg`; // Asigna la ruta de la imagen según el número
+
+  if (i === 1) img.classList.add('active'); // Marca la primera miniatura como activa
+
+  img.onclick = () => setImage(i - 1); // Al hacer click cambia la imagen principal (index empieza en 0)
+
+  thumbs.appendChild(img); // Inserta la miniatura dentro del contenedor thumbs
 }
 
-function setImage(index){
-  currentIndex = (index + totalImages) % totalImages;
-  mainImg.src = `img/producto${currentIndex + 1}.jpeg`;
-  document.querySelectorAll('.thumbs img').forEach((img,i)=>{
-    img.classList.toggle('active', i === currentIndex);
+/* Función que actualiza la imagen principal y el estado activo de miniaturas */
+function setImage(index){ // Recibe el índice objetivo (0 a totalImages-1)
+  currentIndex = (index + totalImages) % totalImages; // Ajusta el índice para que sea circular (evita negativos)
+  mainImg.src = `img/producto${currentIndex + 1}.jpeg`; // Cambia la imagen principal según el índice
+
+  document.querySelectorAll('.thumbs img').forEach((img,i)=>{ // Recorre todas las miniaturas
+    img.classList.toggle('active', i === currentIndex); // Activa solo la miniatura correspondiente
   });
 }
-function nextImage(){ setImage(currentIndex + 1); }
-function prevImage(){ setImage(currentIndex - 1); }
 
-/* MODAL */
-function openModal(){
-  document.getElementById('modal').style.display='flex';
+/* Avanza a la siguiente imagen */
+function nextImage(){ setImage(currentIndex + 1); } // Suma 1 al índice actual y actualiza
+
+/* Retrocede a la imagen anterior */
+function prevImage(){ setImage(currentIndex - 1); } // Resta 1 al índice actual y actualiza
+
+/* =========================
+   MODAL
+   ========================= */
+
+/* Abre el modal mostrando el contenedor como flex (para centrarlo) */
+function openModal(){ // Función para abrir el modal
+  document.getElementById('modal').style.display='flex'; // Cambia display a flex (lo hace visible)
 }
-function sendWhatsApp(){
 
-  const nameInput = document.getElementById('name');
-  const cityInput = document.getElementById('city');
-  const addressInput = document.getElementById('address');
-  const phoneInput = document.getElementById('phone');
-  const colorInput = document.getElementById('color');
+/* Envía el pedido por WhatsApp */
+function sendWhatsApp(){ // Función que valida, arma mensaje y abre WhatsApp
 
-  const name = nameInput.value.trim();
-  const city = cityInput.value.trim();
-  const address = addressInput.value.trim();
-  const phone = phoneInput.value.trim();
-  const color = colorInput.value;
+  /* Obtiene referencias a cada input del formulario */
+  const nameInput = document.getElementById('name'); // Input del nombre
+  const cityInput = document.getElementById('city'); // Input de ciudad
+  const addressInput = document.getElementById('address'); // Input de dirección
+  const phoneInput = document.getElementById('phone'); // Input de teléfono
+  const colorInput = document.getElementById('color'); // Select de color
 
-  if (!name || !city || !address || !phone || !color) {
-    alert('Por favor completa todos los campos');
-    return;
+  /* Lee valores y elimina espacios al inicio/fin cuando aplica */
+  const name = nameInput.value.trim(); // Nombre sin espacios sobrantes
+  const city = cityInput.value.trim(); // Ciudad sin espacios sobrantes
+  const address = addressInput.value.trim(); // Dirección sin espacios sobrantes
+  const phone = phoneInput.value.trim(); // Teléfono sin espacios sobrantes
+  const color = colorInput.value; // Color seleccionado (no requiere trim)
+
+  /* Validación: exige que todos los campos estén completos */
+  if (!name || !city || !address || !phone || !color) { // Si alguno está vacío
+    alert('Por favor completa todos los campos'); // Muestra alerta al usuario
+    return; // Detiene la función para no continuar
   }
 
+  /* Construye el mensaje final que se enviará por WhatsApp */
   const message = `Hola, quiero realizar un pedido 👜
 
 📌 Producto: Bolso Bandolera para Dama
@@ -714,42 +844,50 @@ function sendWhatsApp(){
 📍 Dirección: ${address}
 🎨 Color: ${color}
 
-Quedo atento(a) a la confirmación.`;
+Quedo atento(a) a la confirmación.`; // Mensaje multilinea con los datos del comprador
 
   /* 👉 LIMPIAR FORMULARIO */
-  nameInput.value = '';
-  cityInput.value = '';
-  addressInput.value = '';
-  phoneInput.value = '';
-  colorInput.selectedIndex = 0;
+  nameInput.value = ''; // Limpia el campo nombre
+  cityInput.value = ''; // Limpia el campo ciudad
+  addressInput.value = ''; // Limpia el campo dirección
+  phoneInput.value = ''; // Limpia el campo teléfono
+  colorInput.selectedIndex = 0; // Reinicia el select a la primera opción
 
   /* 👉 CERRAR MODAL */
-  document.getElementById('modal').style.display = 'none';
+  document.getElementById('modal').style.display = 'none'; // Oculta el modal
 
   /* 👉 REDIRIGIR A WHATSAPP */
-  window.open(
-    `https://wa.me/573114134143?text=${encodeURIComponent(message)}`,
-    '_blank'
+  window.open( // Abre una nueva pestaña/ventana
+    `https://wa.me/573114134143?text=${encodeURIComponent(message)}`, // URL de WhatsApp con mensaje codificado
+    '_blank' // Indica que se abra en una nueva pestaña
   );
 }
 
-/* FAQ TOGGLE */
-document.querySelectorAll('.faq-item strong').forEach(item => {
-  item.addEventListener('click', () => {
-    const p = item.nextElementSibling;
-    const isOpen = p.style.display === 'block';
+/* =========================
+   FAQ TOGGLE (ABRIR/CERRAR)
+   ========================= */
 
-    document.querySelectorAll('.faq-item p').forEach(p => {
-      p.style.display = 'none';
+/* Selecciona todos los <strong> dentro de cada .faq-item y les agrega click */
+document.querySelectorAll('.faq-item strong').forEach(item => { // Recorre todos los títulos del FAQ
+  item.addEventListener('click', () => { // Al hacer click en una pregunta
+    const p = item.nextElementSibling; // Toma el <p> que está justo después del <strong>
+    const isOpen = p.style.display === 'block'; // Verifica si ese <p> ya está visible
+
+    /* Cierra todas las respuestas primero */
+    document.querySelectorAll('.faq-item p').forEach(p => { // Recorre todos los párrafos del FAQ
+      p.style.display = 'none'; // Oculta cada respuesta
     });
 
-    p.style.display = isOpen ? 'none' : 'block';
+    /* Abre o mantiene cerrado el seleccionado según el estado anterior */
+    p.style.display = isOpen ? 'none' : 'block'; // Si estaba abierto lo cierra, si estaba cerrado lo abre
   });
 });
-</script>
+
+</script> <!-- Cierra el bloque de JavaScript -->
+
+</body> <!-- Cierra el cuerpo del documento HTML -->
+</html> <!-- Cierra el documento HTML -->
 
 
-</body>
-</html>
 
 
